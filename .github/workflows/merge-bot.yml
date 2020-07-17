@@ -1,6 +1,7 @@
 name: Merge Bot
 
 on:
+  status: {} # try to merge when other checks are completed
   pull_request:
     types:
       - labeled
