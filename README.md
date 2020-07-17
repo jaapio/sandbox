@@ -1,6 +1,6 @@
 # sandbox
 Sandbox to test github actions
 
-Foo
-Woei
-With checks
+- Foo
+- Woei
+- With checks
