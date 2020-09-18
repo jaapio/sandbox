@@ -31,7 +31,14 @@ jobs:
           npm install
       - run: |
           cd data/asset-builder; \
+          npm version preminor --preid=build
           npm publish --tag nightly --access public;
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Push back package version
+        uses: devops-infra/action-commit-push@latest
+        with:
+          github_token: "${{ secrets.GITHUB_TOKEN }}"
+          commit_prefix: "[AUTO]"
+          commit_message: "Assets package version bump"
 
