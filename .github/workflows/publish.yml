@@ -32,8 +32,10 @@ jobs:
           npm install
       - run: |
           cd data/asset-builder; \
-          npm version preminor --preid=build; \
-          npm publish --access public;
+          npm version preminor --preid=build
+      - run: |
+          cd data/asset-builder; \
+          npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Push back package version
