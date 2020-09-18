@@ -1,0 +1,21 @@
+{
+  "name": "@jaapio/test-asset",
+  "repository" : {
+    "type" : "git",
+    "url": "ssh://git@github.com/jaapio/sandbox.git",
+    "directory": "data/asset-builder"
+  },
+  "version": "1.0.0",
+  "description": "The base assets used to render the default template",
+  "files": [
+    "css/*.css"
+  ],
+  "keywords": [
+    "default",
+    "assets",
+    "css",
+    "js"
+  ],
+  "author": "Jaap <opensource@ijaap.nl>",
+  "license": "MIT"
+}
