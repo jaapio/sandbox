@@ -32,7 +32,7 @@ jobs:
       - run: |
           cd data/asset-builder; \
           npm version preminor --preid=build; \
-          npm publish --tag nightly --access public;
+          npm publish --access public;
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Push back package version
