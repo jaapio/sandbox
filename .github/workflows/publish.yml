@@ -36,7 +36,7 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Push back package version
-        uses: devops-infra/action-commit-push@latest
+        uses: devops-infra/action-commit-push@0.1
         with:
           github_token: "${{ secrets.GITHUB_TOKEN }}"
           commit_prefix: "[AUTO]"
