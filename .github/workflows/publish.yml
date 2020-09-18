@@ -28,9 +28,6 @@ jobs:
           scope: '@jaapio'
       - run: |
           cd data/asset-builder; \
-          npm install version
-      - run: |
-          cd data/asset-builder; \
           npm install
       - run: |
           cd data/asset-builder; \
