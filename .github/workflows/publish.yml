@@ -32,7 +32,7 @@ jobs:
           npm install
       - run: |
           cd data/asset-builder; \
-          npm version preminor --preid=build
+          npm version prerelease --preid=build
       - run: |
           cd data/asset-builder; \
           npm publish --access public
