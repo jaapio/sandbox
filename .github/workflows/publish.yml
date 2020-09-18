@@ -31,7 +31,7 @@ jobs:
           npm install
       - run: |
           cd data/asset-builder; \
-          npm publish;
+          npm publish --access public;
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
