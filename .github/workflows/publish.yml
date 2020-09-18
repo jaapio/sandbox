@@ -26,6 +26,7 @@ jobs:
           node-version: '12.x'
           registry-url: 'https://npm.pkg.github.com'
           scope: '@jaapio'
+      - run: npm install -g version
       - run: |
           cd data/asset-builder; \
           npm install
