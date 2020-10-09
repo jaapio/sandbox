@@ -5,7 +5,7 @@
     "url": "ssh://git@github.com/jaapio/sandbox.git",
     "directory": "data/asset-builder"
   },
-  "version": "1.0.1-build.3",
+  "version": "1.0.1-build.4",
   "description": "The base assets used to render the default template",
   "files": [
     "css/*.css"
