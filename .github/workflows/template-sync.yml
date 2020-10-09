@@ -16,4 +16,5 @@ jobs:
           git_author_name: phpDoc Bot
           git_author_email: bot@phpdoc.org
           template_repository: ergebnis/php-library-template
+          template_ref: main
           ref: refs/heads/master
