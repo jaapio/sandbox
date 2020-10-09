@@ -17,4 +17,9 @@ jobs:
           git_author_email: bot@phpdoc.org
           template_repository: ergebnis/php-library-template
           template_ref: main
+          # The title of the pull request
+          pr_title: '[AUTO] sync with {0}'
+
+          # The message in the pull request
+          pr_message: 'This pull request has been created by the [template sync action](https://github.com/narrowspark/template-sync-action) action.\n\nThis PR synchronizes with {0}'
           ref: refs/heads/master
