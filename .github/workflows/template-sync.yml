@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: narrowspark/template-sync-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.BOT_TOKEN }}
           git_author_name: phpDoc Bot
           git_author_email: bot@phpdoc.org
           template_repository: ergebnis/php-library-template
