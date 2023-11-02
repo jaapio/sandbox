@@ -27,7 +27,7 @@ jobs:
       run: test -e README.md && echo "GUIDES=true" || echo "GUIDES=false" >> "$GITHUB_OUTPUT"
 
     - shell: bash
-      run: echo steps.enable_guides.outputs.GUIDES
+      run: echo ${{join(steps.enable_guides.outputs.*, '\n')}}
 
     - id: pre-render-guides
       if: steps.enable_guides.outputs.GUIDES == true
