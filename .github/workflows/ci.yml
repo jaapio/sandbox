@@ -25,17 +25,7 @@ jobs:
     - id: enable_guides    
       shell: bash
       run: test -e README.md && echo "GUIDES=true" >> $GITHUB_OUTPUT
-
-    - name: Multiple color
-      id: multiple-color-generator
-      run: |
-        echo "FIRST_COLOR=yellow" >> $GITHUB_OUTPUT
-        echo "SECOND_COLOR=red" >> $GITHUB_OUTPUT
-    - name: Get Multiple color
-      run: |
-        echo "The first color is ${{ steps.multiple-color-generator.outputs.FIRST_COLOR }}"
-        echo "The second color is ${{ steps.multiple-color-generator.outputs.SECOND_COLOR }}"
-
+      
     - shell: bash
       run: echo "The first color is ${{ steps.enable_guides.outputs.GUIDES }}"
 
@@ -43,6 +33,10 @@ jobs:
       if: steps.enable_guides.outputs.GUIDES == true
       shell: bash
       run: makedir -p RenderedDocumentation/Result/project/0.0.0
+
+    - if: steps.enable_guides.outputs.GUIDES == 'true'
+      shell: bash
+      run: echo "Treu"
 
     - name: old
       if: steps.enable_guides.outputs.GUIDES == false
