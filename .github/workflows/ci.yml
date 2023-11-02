@@ -24,7 +24,7 @@ jobs:
 
     - id: enable_guides    
       shell: bash
-      run: test -e README.md && echo "GUIDES=on" || echo "GUIDES=off" >> "$GITHUB_OUTPUT"
+      run: test -e README.md && echo "GUIDES=on" || echo "GUIDES=off" >> $GITHUB_OUTPUT
 
     - name: Multiple color
       id: multiple-color-generator
