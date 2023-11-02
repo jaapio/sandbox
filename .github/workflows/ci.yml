@@ -28,7 +28,7 @@ jobs:
         input: .
         output: data
 
-    run: sudo chown -R $(whoami) data/
+    - run: sudo chown -R $(whoami) data/
 
     - shell: bash
       run: | 
