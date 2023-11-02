@@ -20,26 +20,13 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
-    - id: enable_guides    
-      shell: bash
-      run: (test -e aaa.md && echo "GUIDES=true" || echo "GUIDES=false") >> $GITHUB_OUTPUT
-      
+    - uses: TYPO3-Documentation/render-guides@main
+      id: render-guides    
+      with:
+        input: .
+        output: data
+
     - shell: bash
-      run: echo "The first color is ${{ steps.enable_guides.outputs.GUIDES }}"
-
-    - id: pre-render-guides
-      if: steps.enable_guides.outputs.GUIDES == true
-      shell: bash
-      run: makedir -p RenderedDocumentation/Result/project/0.0.0
-
-    - if: steps.enable_guides.outputs.GUIDES == 'true'
-      shell: bash
-      run: echo "Treu"
-
-    - name: old
-      if: steps.enable_guides.outputs.GUIDES == 'false'
-      shell: bash
-      run: echo "old"
-
+      run: ls -al data/
