@@ -24,7 +24,7 @@ jobs:
 
     - id: enable_guides    
       shell: bash
-      run: test -e README.md && echo "GUIDES=true" || echo "GUIDES=false" >> "GITHUB_OUTPUT"
+      run: test -e README.md && echo "GUIDES=true" || echo "GUIDES=false" >> "$GITHUB_OUTPUT"
 
     - shell: bash
       run: echo steps.enable_guides.outputs.GUIDES
