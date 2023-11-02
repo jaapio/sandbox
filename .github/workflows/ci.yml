@@ -24,7 +24,7 @@ jobs:
 
     - id: enable_guides    
       shell: bash
-      run: (test -e README.md && echo "GUIDES=true" || echo "GUIDES=false") >> $GITHUB_OUTPUT
+      run: (test -e aaa.md && echo "GUIDES=true" || echo "GUIDES=false") >> $GITHUB_OUTPUT
       
     - shell: bash
       run: echo "The first color is ${{ steps.enable_guides.outputs.GUIDES }}"
@@ -39,7 +39,7 @@ jobs:
       run: echo "Treu"
 
     - name: old
-      if: steps.enable_guides.outputs.GUIDES == false
+      if: steps.enable_guides.outputs.GUIDES == 'false'
       shell: bash
       run: echo "old"
 
