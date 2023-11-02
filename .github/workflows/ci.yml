@@ -29,4 +29,6 @@ jobs:
         output: data
 
     - shell: bash
-      run: ls -al data/
+      run: | 
+         id
+         ls -al data/
