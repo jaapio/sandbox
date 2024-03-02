@@ -22,12 +22,6 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v3
 
-    - uses: TYPO3-Documentation/render-guides@main
-      id: render-guides    
-      with:
-        input: .
-        output: data
-
     - shell: bash
       run: | 
          echo ${{ env.GITHUB_REF_NAME }}
