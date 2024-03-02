@@ -30,5 +30,4 @@ jobs:
 
     - shell: bash
       run: | 
-         id
-         ls -al data/
+         echo ${{ env.GITHUB_REF_NAME }}
